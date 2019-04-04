@@ -123,11 +123,8 @@ void merge_sort(int *A,int i, int j)
 }
 void mergesSort(int *A, int n)
 {
-  int array[n];
-  A= array;
-  int i=0;
-  int j=n-1;
-  merge_sort( array, i,  j);
+ 
+  merge_sort( A, 0,  n-1);
 }
 
 
@@ -144,14 +141,14 @@ int main()
 	int *A=new int[N];
 	TA=new int[N];
 	TB=new int[N];
-  	fun_sort sort[]={mergesSort,Ordenamiento_selec,ordenamiento_inserc};
+  	fun_sort sort[]={ordenamientoburbuja,Ordenamiento_selec,ordenamiento_inserc,mergesSort};
   	for(int n=100;n<=N;n*=10)
   	{	for(int i=0;i<n;i++)
   		{
   			A[i]=rand()%n;
 		}
   		cout<<n<<" ";
-  		for(int s=0;s<3;s++)
+  		for(int s=0;s<4;s++)
   		{
   			if(!test_sort(sort[s],A,n))
   			{
