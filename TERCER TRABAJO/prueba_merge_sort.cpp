@@ -87,8 +87,7 @@ void ordenamiento_inserc(int *A, int n){
 
 
 void merge(int *A,int i,int m,int j)
-{
-  int a[j-i+1];
+{int a[j-i+1];
   int b=i;
   int d=m+1;
   int c=0;
@@ -96,10 +95,10 @@ void merge(int *A,int i,int m,int j)
   {
     if(A[b] >= A[d])
     {
-      a[c] = a[d];
+      a[c] = A[d];
       d++;c++;
      }
-    else
+    else if (A[b] < A[d])
     {
       a[c]=A[b];
       b++;c++;
