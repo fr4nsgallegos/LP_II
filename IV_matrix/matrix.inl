@@ -1,5 +1,5 @@
-#include <stdexcept>
 #include "matrix.h"
+#include <iostream>
 
 using std::ostream;  using std::istream;  using std::endl;
 using std::domain_error;
