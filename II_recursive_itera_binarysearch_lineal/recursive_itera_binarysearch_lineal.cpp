@@ -5,9 +5,7 @@ using namespace std;
 
 bool recursive_bina(int x, int* array ,int n, int l, int r)
 {
-  
   int m=(l+r)/2;
-  
   if (array[m]=x)
   {  
     return true;
@@ -17,15 +15,12 @@ bool recursive_bina(int x, int* array ,int n, int l, int r)
     recursive_bina(x,array,n, l=m+1, r);
     cout<<array[m]<<endl;
   }
-
   else if (array[m]>x)
   {
-    recursive_bina(x,array,n, l, r=m-1);
-    
+    recursive_bina(x,array,n, l, r=m-1); 
   }
   return false;
 }
-
 bool binary_search_iter (int x, int* array ,int n)
 {
   int m;
@@ -33,10 +28,7 @@ bool binary_search_iter (int x, int* array ,int n)
   int j=n-1;
   while (i<=j)
   {
-    
     m=(i+j)/2;
-   
-
     if(array[m]==x)
     {
       return true;
@@ -66,24 +58,21 @@ bool lineal(int x, int* array, int n)
     return false;
 }
 
-int main() {
-  int n;
-  int *array;
-  int a[] = {1,5,10,12,16,17,19};
-  array = a;
-  n=7;
-    
-  
-if ( binary_search_iter(10, array , n))
-  {
-    cout<< "fue encontrado"<<endl;
-  }
-  
-if (recursive_bina(10, array , n,0,6))
-  {
-    cout<< "escontrado"<<endl;
-  }
-  
-  return 0;
+int main() 
+{
+	int n;
+	int *array;
+	int a[] = {1,5,10,12,16,17,19};
+	array = a;
+	n=7;
+	if ( binary_search_iter(10, array , n))
+	{
+		cout<< "fue encontrado"<<endl;
+	}
+	if (recursive_bina(10, array , n,0,6))
+	{
+		cout<< "escontrado"<<endl;
+	}
+	return 0;
   
 }
