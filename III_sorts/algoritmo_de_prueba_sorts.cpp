@@ -13,6 +13,7 @@ int *TB;
 
 typedef long long my_int;
 typedef void(*fun_sort)(int *,int);
+
 bool test_sort(fun_sort sort,const int *A,int n)
 {
 	memcpy(TA,A,sizeof(int)*n);
@@ -25,25 +26,31 @@ bool test_sort(fun_sort sort,const int *A,int n)
 	std::sort(TB,TB+n);
 	for(int i=0;i<n;i++)
 	{	if(TA[i]!=TB[i])
-		{	return false;
+		{
+			return false;
 		}
 	}
 	cout<<time<<" ";
 	return true;
 }
-void ordenamientoburbuja(int *A,int n){
+void ordenamientoburbuja(int *A,int n)
+{
 	int temp;
 	int j;
-	 for (int i=1; i<n; i++){
+	 for (int i=1; i<n; i++)
+	 {
 	 
-          for ( j=0 ; j<n - 1; j++){
+          for ( j=0 ; j<n - 1; j++)
+		  {
 		  
-               if (A[j] > A[j+1]){
-			   
+               if (A[j] > A[j+1])
+			   {
                     temp = A[j];
                     A[j] = A[j+1];
-                    A[j+1] = temp;}
-				}}
+                    A[j+1] = temp;
+				}
+			}
+	}
 }
 
 void Ordenamiento_selec(int *a, int n)
@@ -55,7 +62,8 @@ void Ordenamiento_selec(int *a, int n)
 		for(int j=i+1;j<n;j++)
 		{
 			if(a[j]<a[min])
-			{	min=j;
+			{
+				min=j;
 			}
 		}
 		aux=a[min];
@@ -65,19 +73,19 @@ void Ordenamiento_selec(int *a, int n)
 }
 
 
-void ordenamiento_inserc(int *A, int n){
+void ordenamiento_inserc(int *A, int n)
+{
 	int cont = 0;
-
-	for (int i = 1; i < n; i++) {
+	for (int i = 1; i < n; i++) 
+	{
 		int y = A[i];
 		int j = i - 1;
-
-		while ((j >= 0) && (A[j] > y)) {
+		while ((j >= 0) && (A[j] > y)) 
+		{
 			A[j + 1] = A[j];
 			j--;
 			cont++;
 		}
-
 		A[j + 1] = y;
 	}
 
@@ -110,7 +118,6 @@ int main()
 		    }
 		}
 		cout<<endl;
-	
 	}
 	delete []A;
 	delete []TA;
@@ -128,8 +135,7 @@ void insertion(int *a,int n)
         {
             a[j + 1] = a[j];
             j--;
-        }
-             
+        } 
         a[j + 1] = v;
     }   
 //	for(int i=0;i<n;i++)
