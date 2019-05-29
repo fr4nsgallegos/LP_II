@@ -18,11 +18,11 @@ using namespace std;
 
 class Figure
 {
-protected:
-	string color;
-public:
-	Figure(string pcolor = "black");
-	virtual ~Figure() = 0;
-    void virtual draw(QPainter * painter) = 0;
+    protected:
+        string color;
+    public:
+        Figure(string pcolor = "black");
+        virtual ~Figure() = 0;
+        void virtual draw(QPainter * painter) = 0;
 };
 

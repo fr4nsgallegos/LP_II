@@ -19,5 +19,4 @@ Square::~Square()
 void Square::draw(QPainter * painter)
 {
     painter->drawRect(start->getx(),start->gety(),side,side);
-    //painter->drawEllipse(center->getx(),center->gety(),radio,radio);
 }

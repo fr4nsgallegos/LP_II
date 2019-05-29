@@ -4,8 +4,8 @@
 
 Point::Point(int px, int py)
 {
-	x = px;
-	y = py;
+    x = px;
+    y = py;
 }
 
 
@@ -15,16 +15,16 @@ Point::~Point()
 
 int Point::getx()
 {
-	return x;
+    return x;
 }
 
 int Point::gety()
 {
-	return y;
+    return y;
 }
 
 void Point::set_xy(int _x, int _y)
 {
-	x = _x;
-	y = _y;
+    x = _x;
+    y = _y;
 }

@@ -16,7 +16,4 @@ public:
     Triangle(int pheight, int pposx, int pposy);
     ~Triangle();
     void draw(QPainter * painter);
-
-//    void draw(QPainter * painter);
-
 };

@@ -17,7 +17,6 @@ Circle::~Circle()
 
 void Circle::draw(QPainter * painter)
 {
-    //cout << "Se dibuja un circulo de radio " << radio << " de color " << color << " y de coordenadas "<< center->getx() << "," << center->gety() << endl << endl;
 
     painter->drawEllipse(center->getx(),center->gety(),radio,radio);
 
