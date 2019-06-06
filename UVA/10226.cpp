@@ -5,7 +5,7 @@ int main() {
 	int t=0;
 	cin>>t;
 	getchar();
-	getchar();
+	
 
 	while(t>0) {
 		
