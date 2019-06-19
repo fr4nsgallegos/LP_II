@@ -4,8 +4,8 @@ using namespace std;
 
 struct A
 {
-int x;
-string str;
+	int x;
+	string str;
 /*
 A(int a, string s){
 	x=a;
@@ -32,12 +32,8 @@ void savearray(vector <A>&VA,char s [] ){
 	ofstream fichero(s,ios::binary);
 	for(int i=0;i<VA.size();i++){
 		fichero.write((char*)&VA[i],sizeof(A));
-	
 	}
-	
 	fichero.close();
-	
-	
 }
 
 void loadarray(vector <A> &VA,char s [], int tam){
@@ -46,7 +42,6 @@ void loadarray(vector <A> &VA,char s [], int tam){
 	for(int i=0;i<tam;i++)
 	{
 		fichero.read((char*)&VA[i],sizeof(A));
-	
 	}
 	fichero.close();
 }
